@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  background-color: $zinc400;
+  @media (min-width: 765px) and (max-width: 1400px) {
+    .navbar {
+      width: fit-content;
+    }
+  }
+}

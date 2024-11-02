@@ -1,0 +1,125 @@
+//font
+$fontFirst: 'Roboto', serif;
+$fontSecond: 'Outfit', serif;
+$fontThird: 'Poppins', serif;
+
+//Black and white
+
+$WhiteColor: #ffffff;
+$BlackColor: #000000;
+
+// text color
+$textPrimaryColor: #27272a;
+$textSecondaryColor: #52525b;
+$textMutedColor: #a1a1aa;
+$textBrandColor: #b91c1c;
+
+//Surface Color
+
+$surfPrimaryColor: #fafafa;
+$surfSecondaryColor: #fafafa;
+$surfBrandColor: #dc2626;
+$surfLightColor: #ffffff;
+$surfInvertColor: #f4f4f5;
+
+//Border Color
+$borderPrimaryColor: #e4e4e7;
+$borderBrandColor: #ef4444;
+$borderDarkColor: #3f3f46;
+$borderLightColor: #fafafa;
+$borderInvertColor: #e2e8f0;
+
+//shadow
+$shadowXS: 0px 3px 5px 0px rgba(30, 41, 59, 0.03);
+
+//normal color
+$zinc300: #d4d4d8;
+$zinc400: #a1a1aa;
+$slate500: #64748b;
+$red500: #ef4444;
+$slate700: #334155;
+
+//button color
+$buttonRedColor: #dc2626;
+
+//font size
+$fontSizeSm: 16px;
+
+//font weight
+$fontWeightBold: 700;
+
+//Main width
+$small: 270px;
+$medium: 767px;
+.container {
+  width: 1400px;
+  margin: 0 auto;
+  @media only screen and (min-width: $small) and (max-width: $medium) {
+    width: 96%;
+  }
+}
+
+//button
+.red_button {
+  display: flex;
+  padding: 12px 20px;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  border-radius: 4px;
+  background: $buttonRedColor;
+  color: $WhiteColor;
+
+  /* title/sm */
+  font-family: 'Roboto', serif;
+  font-size: $fontSizeSm;
+  font-style: normal;
+  font-weight: $fontWeightBold;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+//// bottom hero
+
+// small card styel
+
+.card {
+  height: 260px;
+  width: 100px;
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  flex: 1 0 0;
+  border-radius: 4px;
+  background: $WhiteColor;
+
+  /* shadow-xs */
+  box-shadow: $shadowXS;
+}
+
+.card_heading {
+  color: $textPrimaryColor;
+  font-family: $fontFirst;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 133.333% */
+}
+
+.card_text {
+  color: $slate500;
+  font-family: $fontFirst;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+/* this area is for There are 3 stage title*/
+.ul_li1 {
+  li {
+    margin-left: 25px;
+  }
+}

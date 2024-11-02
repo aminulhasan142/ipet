@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ul li {
+  display: inline-block;
+}
+
+a {
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* this area is for There are 3 stage title*/
+.expandable_div {
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.learning_content {
+  display: none;
+}
+
+.expanded {
+  display: block;
+}

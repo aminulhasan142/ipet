@@ -1,0 +1,23 @@
+//mobile screen
+
+@media only screen and (min-width: $small) and (max-width: $medium) {
+  //Hero Section Style
+  #hero_area {
+    width: 100%;
+    #hero_section {
+      .card_container {
+        .small_card_container {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+//tab screen
+@media (min-width: 765px) and (max-width: 1400px) {
+  #hero_section {
+    width: fit-content;
+  }
+}
