@@ -77,6 +77,10 @@ $medium: 767px;
   font-weight: $fontWeightBold;
   line-height: 24px;
   cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 3px 5px 0px rgba(222, 0, 0, 0.2);
+  }
 }
 
 //// bottom hero
@@ -118,8 +122,29 @@ $medium: 767px;
 }
 
 /* this area is for There are 3 stage title*/
+// accordian
 .ul_li1 {
   li {
     margin-left: 25px;
+  }
+}
+.accordion_title_text {
+  display: flex;
+  gap: 16px;
+  .accordion_title_num {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 360px;
+    background: $surfBrandColor;
+    font-family: $fontFirst;
+    color: $WhiteColor;
+    font-weight: 700;
+  }
+  p {
+    display: flex;
   }
 }
