@@ -1,0 +1,265 @@
+.pricing_section {
+  display: flex;
+  padding: 72px;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  align-self: stretch;
+  .pricing_container {
+    display: flex;
+    max-width: 1116px;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    flex: 1 0 0;
+    h2 {
+      color: $red500;
+      font-family: $fontSecond;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .price_card_table {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      gap: 32px;
+      align-self: stretch;
+      flex-wrap: wrap;
+      .price_card1 {
+        display: flex;
+        padding: 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        flex: 1 0 0;
+        // border related
+        border-radius: 4px;
+        background: $WhiteColor;
+
+        /* shadow-md */
+        box-shadow: $shadowMD;
+        h3 {
+          color: $textPrimaryColor;
+          font-family: $fontSecond;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        .card_description {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          align-self: stretch;
+
+          h4 {
+            color: $textSecondaryColor;
+
+            /* title/sm */
+            font: {
+              size: 16px;
+              family: $fontFirst;
+            }
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px; /* 150% */
+          }
+          ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 8px;
+            li {
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+              align-self: stretch;
+
+              span {
+                i {
+                  color: $green500;
+                }
+              }
+              p {
+                color: $textSecondaryColor;
+
+                /* body/base */
+                font: {
+                  size: 14px;
+                  family: $fontFirst;
+                }
+                font-style: normal;
+                font-weight: 400;
+                line-height: 21px; /* 150% */
+              }
+            }
+          }
+          .price_p {
+            color: $BlackColor;
+
+            font: {
+              size: 24px;
+              family: $fontFirst;
+            }
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px; /* 150% */
+          }
+          .red_button {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+          }
+        }
+      }
+      .card_red_container {
+        display: flex;
+        padding: 2px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 0;
+        border-radius: 4px;
+        background: $surfBrandColor;
+
+        /* shadow-md */
+        box-shadow: $shadowMD;
+
+        h1 {
+          color: $WhiteColor;
+
+          /* title/sm */
+          font: {
+            family: $fontFirst;
+            size: 16px;
+          }
+          font-style: normal;
+          font-weight: 700;
+          line-height: 24px; /* 150% */
+        }
+        .price_card2 {
+          @extend .price_card1;
+        }
+      }
+      .contact_us_card {
+        display: flex;
+        padding: 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        flex: 1 0 0;
+        border-radius: 4px;
+        background: $WhiteColor;
+
+        /* shadow-md */
+        box-shadow: $shadowMD;
+
+        .star_div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 24px;
+          align-self: stretch;
+          .start_div_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            span {
+              color: $slate700;
+              font-family: $fontThird;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+            }
+            .star_sticker {
+              background-image: url('/img/star.svg');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              height: 140px;
+              width: 140px;
+              .star_pricing_div {
+                display: flex;
+                position: relative;
+                top: 20px;
+                left: 20px;
+                width: 100px;
+                height: 100px;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 9999px;
+                border: 2px dashed $red300;
+                p {
+                  color: $WhiteColor;
+
+                  /* title/xl */
+                  font: {
+                    family: $fontFirst;
+                    size: 24px;
+                    style: normal;
+                    weight: 700;
+                  }
+                  line-height: 36px; /* 150% */
+                }
+              }
+            }
+            .star_pre_stu {
+              display: flex;
+              padding: 10px 16px;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              border-radius: 9999px;
+              p {
+                color: $textPrimaryColor;
+                text-align: center;
+
+                /* title/sm */
+                font: {
+                  family: $fontFirst;
+                  size: 16px;
+                  style: normal;
+                  weight: 700;
+                }
+                line-height: 24px; /* 150% */
+                span {
+                  color: $textPrimaryColor;
+                  font: {
+                    family: $fontFirst;
+                    size: 24px;
+                    style: normal;
+                    weight: 700;
+                  }
+                  line-height: 36px;
+                }
+              }
+            }
+          }
+          .red_button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+    .direction_svg {
+      position: relative;
+      bottom: 123px;
+      left: 425px;
+    }
+  }
+}
