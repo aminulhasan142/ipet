@@ -36,11 +36,14 @@ $shadowXS: 0px 3px 5px 0px rgba(30, 41, 59, 0.03);
 //normal color
 $zinc300: #d4d4d8;
 $zinc400: #a1a1aa;
+$slate50: #f8fafc;
 $slate500: #64748b;
 $red300: #fca5a5;
 $red500: #ef4444;
 $slate700: #334155;
 $green500: #16a34a;
+$green600: #16a34a;
+$textMuted: #a1a1aa;
 
 //button color
 $buttonRedColor: #dc2626;
@@ -84,6 +87,29 @@ $medium: 767px;
   &:hover {
     box-shadow: 0px 3px 5px 0px rgba(222, 0, 0, 0.2);
   }
+}
+
+.notActiveButton {
+  display: flex;
+  padding: 12px 20px;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  border-radius: 4px;
+  background: $surfInvertColor;
+  color: $textSecondaryColor;
+
+  /* title/sm */
+  font-family: 'Roboto', serif;
+  font-size: $fontSizeSm;
+  font-style: normal;
+  font-weight: $fontWeightBold;
+  line-height: 24px;
+  cursor: pointer;
+
+  // &:hover {
+  //   box-shadow: 0px 3px 5px 0px rgba(212, 123, 123, 0.2);
+  // }
 }
 
 //// bottom hero
