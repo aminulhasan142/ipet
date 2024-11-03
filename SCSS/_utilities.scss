@@ -179,3 +179,21 @@ $medium: 767px;
     display: flex;
   }
 }
+
+.direction_svg {
+  position: absolute;
+  right: 420px;
+  top: 3409px;
+}
+
+.foooter {
+  background-color: #52525b;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #f8fafc;
+  font-family: $fontThird;
+  font-size: 30px;
+}
