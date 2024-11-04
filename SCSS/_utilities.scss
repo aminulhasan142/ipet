@@ -183,7 +183,75 @@ $medium: 767px;
 .direction_svg {
   position: absolute;
   right: 420px;
-  top: 3409px;
+  top: 3530px;
+}
+
+//title text
+
+.title_text {
+  color: $slate700;
+  font: {
+    family: $fontFirst;
+    size: 24px;
+    style: normal;
+    weight: 700;
+  }
+  line-height: 36px;
+}
+// title number for learning
+.title_number {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 360px;
+  background: $surfBrandColor;
+  color: $WhiteColor;
+  font: {
+    family: $fontFirst;
+    size: 24px;
+    style: normal;
+    weight: 700;
+  }
+  line-height: 36px;
+}
+.arrow_icon_container {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 360px;
+  background: $surfInvertColor;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  span {
+    color: $textPrimaryColor;
+  }
+}
+//description text
+.description_text_1 {
+  color: $textSecondaryColor;
+  font: {
+    family: $fontFirst;
+    size: 16px;
+    style: normal;
+    weight: 400;
+  }
+  line-height: 24px;
+}
+.description_text_2 {
+  color: $textBrandColor;
+  font: {
+    family: $fontFirst;
+    size: 16px;
+    style: normal;
+    weight: 700;
+  }
+  line-height: 24px;
 }
 
 .foooter {
