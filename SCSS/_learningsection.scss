@@ -31,52 +31,6 @@
       justify-content: center;
       align-items: center;
       gap: 16px;
-      .first_content_div {
-        display: flex;
-        padding: 32px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 24px;
-        align-self: stretch;
-        border-radius: 4px;
-        // red bottom border for active content container
-        .active {
-          border-bottom: 4px solid $borderBrandColor;
-        }
-        background: $slate50;
-        .title_text_box {
-          display: flex;
-          align-items: center;
-          gap: 24px;
-          align-self: stretch;
-          .title_number_text_box {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            flex: 1 0 0;
-            .title_number {
-              display: flex;
-              width: 48px;
-              height: 48px;
-              padding: 8px;
-              justify-content: center;
-              align-items: center;
-              gap: 10px;
-              border-radius: 360px;
-              background: $surfBrandColor;
-              color: $WhiteColor;
-              font: {
-                family: $fontFirst;
-                size: 24px;
-                style: normal;
-                weight: 700;
-              }
-              line-height: 36px;
-            }
-          }
-        }
-      }
     }
     .image_container_learning {
       display: flex;
@@ -87,10 +41,11 @@
       flex: 1 0 0;
       align-self: stretch;
       border-radius: 4px;
-      background: url('/img/dog.jpg') lightgray 50% / cover no-repeat;
+      background: url('/img/dog1.jpg') lightgray 50% / cover no-repeat;
+
       .image_text_container {
         display: flex;
-        padding: 56px 32px;
+        padding: 56px 32px 32px 32px;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
@@ -158,6 +113,90 @@
   }
 }
 
-.first_content_div .active {
+// according box whith image
+.first_content_div {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 4px;
+  // red bottom border for active content container
+
+  background: $slate50;
+  .title_text_box {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    cursor: pointer;
+    .title_number_text_box {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1 0 0;
+      .title_number {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 360px;
+        background: $surfBrandColor;
+        color: $WhiteColor;
+        font: {
+          family: $fontFirst;
+          size: 24px;
+          style: normal;
+          weight: 700;
+        }
+        line-height: 36px;
+      }
+    }
+  }
+}
+
+.accodion_border_active {
   border-bottom: 4px solid $borderBrandColor;
+}
+
+//description text
+
+.hidden_files_accodion {
+  display: none;
+  // max-height: 0;
+  // height: 265px;
+  // overflow: hidden;
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+  .description_text_1 {
+    color: $textSecondaryColor;
+    font: {
+      family: $fontFirst;
+      size: 16px;
+      style: normal;
+      weight: 400;
+    }
+    line-height: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .description_text_2 {
+    color: $textBrandColor;
+    font: {
+      family: $fontFirst;
+      size: 16px;
+      style: normal;
+      weight: 700;
+    }
+    line-height: 24px;
+  }
+}
+.accodion_text_active {
+  // height: 265px;
+  display: block;
 }

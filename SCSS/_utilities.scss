@@ -182,8 +182,8 @@ $medium: 767px;
 
 .direction_svg {
   position: absolute;
-  right: 420px;
-  top: 3530px;
+  right: 415px;
+  top: 3535px;
 }
 
 //title text
@@ -232,28 +232,8 @@ $medium: 767px;
     color: $textPrimaryColor;
   }
 }
-//description text
-.description_text_1 {
-  color: $textSecondaryColor;
-  font: {
-    family: $fontFirst;
-    size: 16px;
-    style: normal;
-    weight: 400;
-  }
-  line-height: 24px;
-}
-.description_text_2 {
-  color: $textBrandColor;
-  font: {
-    family: $fontFirst;
-    size: 16px;
-    style: normal;
-    weight: 700;
-  }
-  line-height: 24px;
-}
 
+// foooter
 .foooter {
   background-color: #52525b;
   height: 300px;
