@@ -24,14 +24,20 @@
       line-height: normal;
     }
 
-    .swiper_container {
+    #swiper_container {
       display: flex;
-      .swiper_wrapper {
+      width: 100%;
+      overflow: hidden;
+      #swiper_wrapper {
         display: flex;
         gap: 24px;
-        .swiper_slide {
+        display: flex;
+        width: 100%;
+        #swiper_slide {
+          width: 100%; /* Each slide takes full width of the container */
+          box-sizing: border-box;
           display: flex;
-          width: 840px;
+          // width: 840px;
           height: 360px;
           padding: 0px;
           flex-direction: column;
@@ -44,6 +50,13 @@
 
           /* shadow-xs */
           box-shadow: $shadowXS;
+
+          .swiper-slide {
+            img {
+              width: 100%;
+            }
+          }
+
           .swiper_slide_text_container {
             display: flex;
             padding: 32px 24px 24px 24px;
@@ -94,23 +107,83 @@
   }
 }
 
-.buttons {
+// .swiper-button-container {
+//   position: absolute;
+//   bottom: 0px;
+//   left: 0px;
+// }
+
+/* General Swiper Container */
+.swiper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: 60px; /* Space for navigation buttons and pagination */
+}
+
+#swiper_container {
+  width: 100%;
+  overflow: hidden;
+}
+
+#swiper_wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+/* Swiper Slides */
+.swiper-slide img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Controls Container (Pagination and Navigation Buttons) */
+.swiper-button-container {
   position: absolute;
   bottom: 15px;
-}
-#swiper_button_left,
-#swiper_button_right {
+  width: 100%;
   display: flex;
-  padding: 16px;
   align-items: center;
-  gap: 8px;
-  border-radius: 4px;
-  background: $surfBrandColor;
-  color: $WhiteColor;
-  cursor: pointer;
+  justify-content: center;
+  gap: 10px;
+}
 
-  /* shadow-xs */
-  &:hover {
-    box-shadow: $shadowXS;
-  }
+/* Pagination Styling */
+.swiper-pagination {
+  display: flex;
+  gap: 8px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #b91c1c; /* Active dot color */
+}
+
+/* Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #b91c1c;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  width: 35px;
+  height: 35px;
+}
+
+.swiper-button-prev {
+  margin-right: auto;
+}
+
+.swiper-button-next {
+  margin-left: auto;
 }

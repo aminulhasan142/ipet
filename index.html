@@ -593,37 +593,33 @@
     <div class="startUp_contain_container">
       <h1>Dog Grooming Business Start-up Resources</h1>
       <!-- Swiper -->
-      <div class="swiper_container swiper">
-        <div class=" swiper_wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper_slide">
-            <div class="swiper_slide_text_container">
-              <h3>29 Model Dogs Per Student</h3>
-              <p>Large selection of coat types and breeds, learn on all types of dog varieties.</p>
-            </div>
+      <div class="swiper mySwiper" id="swiper_container">
+        <div class="swiper-wrapper" id="swiper_wrapper">
+          <div class="swiper-slide">
+            <img src="/img/swiper1.jpg" />
           </div>
-          <!-- Slide 2 -->
-          <div class="swiper_slide swiper_slide_1">
-            <!-- text content if any for slide 2 -->
+          <div class="swiper-slide">
+            <img src="/img/swiper2.png" />
           </div>
-
+          <div class="swiper-slide">
+            <img src="/img/dog1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/dog_cleaning.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/doggi.jpg" />
+          </div>
         </div>
 
-
+        <!-- Navigation and Pagination -->
+        <div class="swiper-button-container">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
-      <!-- <div class="swiper_bottom_container">
-        
-        <div class="swiper-pagination"></div>
-        
-        <div class="swiper_buttons">
-          <div class="swiper-button-next" id="swiper_button_left">
-            <i class="fa-sharp fa-solid fa-arrow-left"></i>
-          </div>
-          <div class="swiper-button-prev" id="swiper_button_left">
-            <i class="fa-sharp fa-solid fa-arrow-right"></i>
-          </div>
-        </div>
-      </div> -->
+
     </div>
   </section>
 
@@ -657,7 +653,25 @@
 
   <img src="/img/direction.svg" alt="direction" class="direction_svg">
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      // loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
   <script src="/js/data.js"></script>
   <script src="/js/script.js"></script>
 </body>
