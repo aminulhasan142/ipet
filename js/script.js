@@ -115,12 +115,48 @@ function loadFaq() {
     .join('')}`;
 }
 
-function openAnswer(faqElement) {
-  const faqBor = faqElement.parentNode;
-  const faqAns = faqElement.nextElementSibling;
+// function openAnswer(faqElement) {
+//   const faqBor = faqElement.parentNode;
+//   const faqAns = faqElement.nextElementSibling;
 
-  faqBor.classList.toggle('faq_active_border');
-  faqAns.classList.toggle('faq_active_answer');
+//   faqBor.classList.toggle('faq_active_border');
+//   faqAns.classList.toggle('faq_active_answer');
+// }
+
+// Set the first FAQ item as active by default when the page loads
+document.addEventListener('DOMContentLoaded', function () {
+  const firstFaqItem = document.querySelector('.faq_item');
+  if (firstFaqItem) {
+    firstFaqItem.classList.add('faq_active_border'); // Active border for the first FAQ item
+    const firstAnswer = firstFaqItem.querySelector('.faq_answer');
+    if (firstAnswer) {
+      firstAnswer.classList.add('faq_active_answer'); // Show the answer of the first FAQ item
+    }
+  }
+});
+
+function openAnswer(faqElement) {
+  const faqBor = faqElement.parentNode; // Get the parent container of the question and answer
+  const faqAns = faqElement.nextElementSibling; // Select the answer element
+
+  // Check if this FAQ item is already active
+  const isAlreadyActive = faqBor.classList.contains('faq_active_border');
+
+  // Close all FAQ items
+  const allFaqItems = document.querySelectorAll('.faq_item');
+  allFaqItems.forEach(item => {
+    item.classList.remove('faq_active_border'); // Remove the active border
+    const answer = item.querySelector('.faq_answer');
+    if (answer) {
+      answer.classList.remove('faq_active_answer'); // Hide the answer
+    }
+  });
+
+  // Toggle the clicked FAQ item if it was not already active
+  if (!isAlreadyActive) {
+    faqBor.classList.add('faq_active_border'); // Add the active border to the clicked item
+    faqAns.classList.add('faq_active_answer'); // Show the answer of the clicked item
+  }
 }
 
 loadFaq();

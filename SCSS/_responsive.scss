@@ -1,240 +1,589 @@
-// // _responsive.scss
+// Import Google Fonts
+@import 'https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap';
 
-// // Mobile first approach for screens up to 767px wide
-// @media only screen and (max-width: 767px) {
-//   // General container adjustments
-//   .container {
-//     width: 96%;
-//     padding: 0 10px;
-//     margin: 0 auto;
-//   }
+// Global Responsive Container
+.container {
+  width: 1400px;
+  margin: 0 auto;
 
-//   // Navbar adjustments
-//   .navbar {
-//     padding: 10px;
-//     font-size: 16px;
-//   }
+  @media only screen and (max-width: 767px) {
+    width: 96%;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
 
-//   // Hero Section
-//   .hero_section {
-//     .hero_image_container {
-//       height: 400px; // Adjust height for mobile
-//       padding-top: 50px;
-//       background-size: cover;
-//     }
-//     .hero_image_text_container {
-//       h1 {
-//         font-size: 24px;
-//         line-height: 30px;
-//       }
-//       p {
-//         font-size: 14px;
-//       }
-//       .red_button {
-//         font-size: 14px;
-//         padding: 8px 16px;
-//       }
-//     }
-//   }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 
-//   // Accordion Section
-//   .learning_area {
-//     padding: 48px 10px;
-//     h2 {
-//       font-size: 22px;
-//     }
-//     .main_container_learning {
-//       flex-direction: column;
-//     }
-//     .first_content_div {
-//       .title_text_box {
-//         gap: 8px;
-//         .title_number {
-//           width: 36px;
-//           height: 36px;
-//           font-size: 18px;
-//         }
-//         h3 {
-//           font-size: 18px;
-//         }
-//       }
-//       .arrow_icon_container {
-//         width: 24px;
-//         height: 24px;
-//       }
-//     }
-//     .image_container_learning {
-//       width: 100%;
-//       height: 250px;
-//       background-size: cover;
-//       .image_text_container {
-//         padding: 32px;
-//         h3 {
-//           font-size: 18px;
-//         }
-//         ul {
-//           font-size: 14px;
-//         }
-//       }
-//     }
-//   }
+// Navbar
+.navbar {
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  background-color: #a1a1aa;
 
-//   // FAQ Section
-//   .faq_section {
-//     padding: 32px 10px;
-//     h3 {
-//       font-size: 22px;
-//     }
-//     .faq_item {
-//       padding: 16px;
-//       .faq_question {
-//         font-size: 18px;
-//         .arrow {
-//           width: 24px;
-//           height: 24px;
-//         }
-//       }
-//       .faq_answer p {
-//         font-size: 14px;
-//       }
-//     }
-//   }
+  @media only screen and (max-width: 767px) {
+    padding: 10px;
+    font-size: 16px;
+  }
 
-//   // Swiper Section
-//   .startUp_section {
-//     padding: 32px 10px;
-//     .swiper-slide {
-//       height: 200px; // Adjust slide height for mobile
-//     }
-//     .swiper-button-container {
-//       bottom: -40px;
-//     }
-//     .swiper-pagination {
-//       bottom: -20px;
-//     }
-//     .swiper-button-prev,
-//     .swiper-button-next {
-//       width: 30px;
-//       height: 30px;
-//       font-size: 16px;
-//     }
-//   }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 12px;
+    font-size: 18px;
+  }
+}
 
-//   // Footer adjustments
-//   .foooter {
-//     font-size: 18px;
-//     padding: 20px;
-//   }
-// }
+// Hero Section
+.hero_section {
+  .hero_image_container {
+    height: 600px;
+    padding-top: 200px;
+    background-size: cover;
 
-// // Tablet view adjustments for screens between 768px and 1024px
-// @media only screen and (min-width: 768px) and (max-width: 1024px) {
-//   .container {
-//     width: 90%;
-//     margin: 0 auto;
-//   }
+    @media only screen and (max-width: 767px) {
+      height: 400px;
+      padding-top: 50px;
+      padding: 16px;
+    }
 
-//   .navbar {
-//     padding: 12px;
-//     font-size: 18px;
-//   }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      height: 595px;
+    }
 
-//   .hero_section {
-//     .hero_image_container {
-//       height: 500px;
-//     }
-//     .hero_image_text_container {
-//       h1 {
-//         font-size: 28px;
-//       }
-//       p {
-//         font-size: 16px;
-//       }
-//       .red_button {
-//         font-size: 16px;
-//         padding: 10px 18px;
-//       }
-//     }
-//   }
+    .hero_image_text_container {
+      h1 {
+        font-size: 32px;
+        line-height: 40px;
 
-//   .learning_area {
-//     padding: 60px 15px;
-//     h2 {
-//       font-size: 24px;
-//     }
-//     .main_container_learning {
-//       flex-direction: column;
-//     }
-//     .first_content_div {
-//       .title_text_box {
-//         gap: 12px;
-//         .title_number {
-//           width: 40px;
-//           height: 40px;
-//           font-size: 20px;
-//         }
-//         h3 {
-//           font-size: 20px;
-//         }
-//       }
-//       .arrow_icon_container {
-//         width: 28px;
-//         height: 28px;
-//       }
-//     }
-//     .image_container_learning {
-//       width: 100%;
-//       height: 300px;
-//       background-size: cover;
-//       .image_text_container {
-//         padding: 40px;
-//         h3 {
-//           font-size: 20px;
-//         }
-//         ul {
-//           font-size: 15px;
-//         }
-//       }
-//     }
-//   }
+        @media only screen and (max-width: 767px) {
+          font-size: 20px;
+          line-height: 30px;
+        }
 
-//   .faq_section {
-//     padding: 40px 15px;
-//     h3 {
-//       font-size: 24px;
-//     }
-//     .faq_item {
-//       padding: 20px;
-//       .faq_question {
-//         font-size: 20px;
-//       }
-//       .faq_answer p {
-//         font-size: 16px;
-//       }
-//     }
-//   }
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: 28px;
+        }
+      }
 
-//   .startUp_section {
-//     padding: 48px 15px;
-//     .swiper-slide {
-//       height: 250px;
-//     }
-//     .swiper-button-container {
-//       bottom: -30px;
-//     }
-//     .swiper-pagination {
-//       bottom: -15px;
-//     }
-//     .swiper-button-prev,
-//     .swiper-button-next {
-//       width: 36px;
-//       height: 36px;
-//       font-size: 18px;
-//     }
-//   }
+      p {
+        font-size: 14px;
 
-//   .foooter {
-//     font-size: 20px;
-//     padding: 30px;
-//   }
-// }
+        @media only screen and (max-width: 767px) {
+          font-size: 14px;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: 16px;
+        }
+      }
+
+      .red_button {
+        font-size: 16px;
+        padding: 12px 20px;
+
+        @media only screen and (max-width: 767px) {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: 16px;
+          padding: 10px 18px;
+        }
+      }
+    }
+  }
+  .bottom_hero_content_container {
+    @media only screen and (max-width: 767px) {
+      padding: 16px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    }
+    .we_offer_card_container {
+      @media only screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        font-size: 16px;
+        padding: 10px 18px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .big_card {
+    h3 {
+      @media only screen and (max-width: 767px) {
+        width: 545px;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+// Learning Area
+.learning_area {
+  padding: 72px;
+  h2 {
+    font-size: 28px;
+  }
+  @media only screen and (max-width: 767px) {
+    padding: 40px 16px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 40px 16px;
+  }
+  .main_container_learning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    @media only screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main_content_container {
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .image_container_learning {
+    background-size: cover;
+
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      display: none;
+    }
+
+    .image_text_container {
+      padding: 56px 32px;
+      h3 {
+        font-size: 20px;
+
+        @media only screen and (max-width: 767px) {
+          font-size: 18px;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: 20px;
+        }
+      }
+
+      ul {
+        font-size: 16px;
+
+        @media only screen and (max-width: 767px) {
+          font-size: 14px;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .book_course {
+    @media only screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      gap: 10px;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      padding: 16px;
+    }
+    p {
+      @media only screen and (max-width: 767px) {
+        width: 95%;
+        text-align: start;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      }
+    }
+  }
+}
+
+//VIDEo Section
+.video_section {
+  @media only screen and (max-width: 767px) {
+    padding: 40px 16px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 40px 16px;
+  }
+  .div_content_container {
+    @media only screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+    }
+    .video_play {
+      @media only screen and (max-width: 767px) {
+        width: 95%;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        width: 95%;
+      }
+    }
+  }
+}
+
+//Pricing Section
+.pricing_section {
+  @media only screen and (max-width: 767px) {
+    padding: 40px 16px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 40px 16px;
+  }
+  h2 {
+    @media only screen and (max-width: 767px) {
+      text-align: center;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      text-align: center;
+    }
+  }
+  .pricing_container {
+    .price_card_table {
+      @media only screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+      }
+      .contact_us_card {
+        @media only screen and (max-width: 767px) {
+          width: 95%;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+// BOOKING section
+
+.booking_section {
+  @media only screen and (max-width: 767px) {
+    padding: 40px 16px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 40px 16px;
+  }
+  .booking_section_container {
+    h1 {
+      @media only screen and (max-width: 767px) {
+        font-size: 20px;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        font-size: 24px;
+      }
+    }
+    .booking_table {
+      .button_group {
+        @media only screen and (max-width: 767px) {
+          width: 80%;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        }
+        button {
+          @media only screen and (max-width: 767px) {
+            width: 39%;
+            justify-content: center;
+          }
+          @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          }
+        }
+      }
+      .booking_time_table {
+        align-self: center;
+        @media only screen and (max-width: 767px) {
+          width: 90%;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        }
+        .booking_time_table1 {
+          .table_data_container {
+            @media only screen and (max-width: 767px) {
+              display: flex;
+              gap: 16px;
+              flex-direction: column;
+              align-items: flex-start;
+            }
+            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Courses Section
+
+.courses_section {
+  @media only screen and (max-width: 767px) {
+    padding: 40px 16px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 40px 16px;
+  }
+  .courses_section_container {
+    .course_card_container {
+      @media only screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      }
+      .course_card1 {
+        .course_card_image {
+          @media only screen and (max-width: 767px) {
+            padding: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//topic section
+
+.topic_section {
+  @media only screen and (max-width: 767px) {
+    padding: 40px 16px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 40px 16px;
+  }
+  .topics_contain_container {
+    @media only screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+    }
+    .topics_contain_image {
+      @media only screen and (max-width: 767px) {
+        width: 90%;
+        align-self: center;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        width: 90%;
+        align-self: center;
+      }
+    }
+    .topic_qulifications_container {
+      @media only screen and (max-width: 767px) {
+        width: 90%;
+        align-self: center;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        width: 90%;
+        align-self: center;
+      }
+      .topic_qulifications_list {
+        #line_topic_qulifications_list {
+          @media only screen and (max-width: 767px) {
+            width: 97%;
+            // align-self: center;
+          }
+          @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            width: 97%;
+            // align-self: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+//About Us
+.about_section {
+  @media only screen and (max-width: 767px) {
+    padding: 40px 16px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 40px 16px;
+  }
+  .about_contain_container {
+    .about_card_container {
+      .first_about_cards {
+        @media only screen and (max-width: 767px) {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          align-self: center;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
+// Start Up section
+
+// FAQ Section
+.faq_section {
+  @media only screen and (max-width: 767px) {
+    padding: 40px 16px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 40px 16px;
+  }
+
+  h3 {
+    font-size: 28px;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: 24px;
+    }
+  }
+  .faq_container {
+    .red_button {
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+  .faq_item {
+    padding: 32px;
+
+    .faq_question {
+      font-size: 20px;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 18px;
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        font-size: 20px;
+      }
+    }
+
+    .faq_answer {
+      p {
+        font-size: 16px;
+
+        @media only screen and (max-width: 767px) {
+          font-size: 14px;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+// StartUp Section
+.startUp_section {
+  padding: 72px;
+
+  .swiper-slide {
+    height: 360px;
+
+    @media only screen and (max-width: 767px) {
+      height: 200px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      height: 250px;
+    }
+  }
+
+  .swiper-button-container {
+    bottom: 15px;
+
+    @media only screen and (max-width: 767px) {
+      bottom: -40px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      bottom: -30px;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 36px;
+    height: 36px;
+
+    @media only screen and (max-width: 767px) {
+      width: 30px;
+      height: 30px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+// Footer Section
+.foooter {
+  font-size: 30px;
+  padding: 40px;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 20px;
+    padding: 30px;
+  }
+}
