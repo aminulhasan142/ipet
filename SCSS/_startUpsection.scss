@@ -172,8 +172,8 @@
   background-color: #b91c1c;
   color: white;
   border: none;
-  padding: 8px;
-  border-radius: 50%;
+  padding: 26px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
   width: 35px;
@@ -182,8 +182,14 @@
 
 .swiper-button-prev {
   margin-right: auto;
+  position: absolute;
+  left: 1200px;
+  top: -14px;
 }
 
 .swiper-button-next {
   margin-left: auto;
+  position: absolute;
+  top: -14px;
+  right: 0px;
 }
