@@ -118,7 +118,15 @@
     }
   }
   .big_card {
-    h3 {
+    @media only screen and (max-width: 767px) {
+      width: 95%;
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1400px) {
+      display: flex;
+      flex-direction: row;
+      width: 95%;
+    }
+    .big_red_text {
       @media only screen and (max-width: 767px) {
         width: 545px;
       }
@@ -132,6 +140,14 @@
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
       display: flex;
       flex-direction: column;
+    }
+    .text_container_hero {
+      .para_text_1,
+      .para_text_2 {
+        @media only screen and (max-width: 767px) {
+          width: 95% !important;
+        }
+      }
     }
   }
 }
@@ -453,11 +469,12 @@
           display: flex;
           flex-direction: column;
           align-items: stretch;
-          align-self: center;
+
+          align-self: self-end;
         }
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           align-items: stretch;
           align-self: center;
         }
@@ -476,19 +493,13 @@
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     padding: 40px 16px;
   }
-
-  h3 {
-    font-size: 28px;
-
-    @media only screen and (max-width: 767px) {
-      font-size: 22px;
-    }
-
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      font-size: 24px;
-    }
-  }
   .faq_container {
+    h3 {
+      @media only screen and (max-width: 767px) {
+        font-size: 24px;
+        text-align: center;
+      }
+    }
     .red_button {
       @media only screen and (max-width: 767px) {
         width: 100%;
@@ -529,10 +540,26 @@
 
 // StartUp Section
 .startUp_section {
-  padding: 72px;
-
+  @media only screen and (max-width: 767px) {
+    padding: 40px 16px;
+    overflow: hidden;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 40px 16px;
+    overflow: hidden;
+  }
+  .startUp_contain_container {
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      overflow: hidden;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
   .swiper-slide {
-    height: 360px;
+    height: 360px !important;
 
     @media only screen and (max-width: 767px) {
       height: 200px;
@@ -540,6 +567,7 @@
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
       height: 250px;
+      height: 360px;
     }
   }
 
@@ -547,7 +575,7 @@
     bottom: 15px;
 
     @media only screen and (max-width: 767px) {
-      bottom: -40px;
+      bottom: 18px;
     }
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -559,10 +587,17 @@
   .swiper-button-next {
     width: 36px;
     height: 36px;
-
+    @media only screen and (min-width: 300px) and (max-width: 600px) {
+      width: 30px;
+      height: 30px;
+      top: -14px;
+      left: 60%;
+    }
     @media only screen and (max-width: 767px) {
       width: 30px;
       height: 30px;
+      top: -14px;
+      left: 70%;
     }
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) {

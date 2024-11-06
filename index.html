@@ -99,15 +99,15 @@
       <div class="big_card">
         <h3 class="big_red_text">Achieve Your Dream of Becoming a Successful Dog Groomer and Entrepreneur</h3>
         <div class="text_container_hero">
-          <h6 class="para_text_1">Are you passionate about dogs and eager to turn that passion into a thriving
+          <p class="para_text_1">Are you passionate about dogs and eager to turn that passion into a thriving
             business? Look no further!
             Our prestigious
             Hertfordshire and London Academy offers a comprehensive program designed to empower you with the skills,
             knowledge, and
-            guidance needed to launch your own successful dog grooming salon.</h6>
-          <h6 class="para_text_2">Embark on your journey toward becoming a professional dog groomer with us. Let’s
+            guidance needed to launch your own successful dog grooming salon.</p>
+          <p class="para_text_2">Embark on your journey toward becoming a professional dog groomer with us. Let’s
             make your dream a
-            reality!</h6>
+            reality!</p>
 
           <div class="social_links">
             <span class="social_links_text"> Share this on </span>
@@ -597,7 +597,7 @@
     <div class="startUp_contain_container">
       <h1>Dog Grooming Business Start-up Resources</h1>
       <!-- Swiper -->
-      <div class="swiper mySwiper" id="swiper_container">
+      <div title="slide to see more picture" class="swiper mySwiper" id="swiper_container">
         <div class="swiper-wrapper" id="swiper_wrapper">
           <div class="swiper-slide">
             <img src="/img/swiper1.jpg" />
@@ -663,9 +663,8 @@
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 2,
-      spaceBetween: 20,
-      // loop: true,
+      slidesPerView: 2, // or 1 for mobile
+      spaceBetween: 20, // Controls the space between slides
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -674,7 +673,19 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      breakpoints: {
+        1024: {
+          slidesPerView: 2,
+        },
+        768: { // For larger screens
+          slidesPerView: 1,
+        },
+        320: { // For mobile screens
+          slidesPerView: 1,
+        }
+      }
     });
+
   </script>
   <script src="/js/data.js"></script>
   <script src="/js/script.js"></script>
