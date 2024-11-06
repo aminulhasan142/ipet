@@ -187,6 +187,9 @@
   position: absolute;
   left: 1175px;
   top: -14px;
+  @media only screen and (max-width: 767px) {
+    left: 57% !important;
+  }
 }
 
 .swiper-button-next {
@@ -194,4 +197,10 @@
   position: absolute;
   top: -14px;
   right: 38px;
+  @media only screen and (max-width: 767px) {
+    right: 13px;
+  }
+  // @media only screen and (min-width: 320px) and (max-width: 425px) {
+  //   right: 60px;
+  // }
 }
