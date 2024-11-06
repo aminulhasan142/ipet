@@ -44,7 +44,7 @@
     background-size: cover;
 
     @media only screen and (max-width: 767px) {
-      height: 400px;
+      height: 470px;
       padding-top: 50px;
       padding: 16px;
     }
@@ -54,13 +54,16 @@
     }
 
     .hero_image_text_container {
+      @media only screen and (max-width: 767px) {
+        align-self: center;
+      }
       h1 {
         font-size: 32px;
         line-height: 40px;
-
         @media only screen and (max-width: 767px) {
           font-size: 20px;
           line-height: 30px;
+          width: 295px;
         }
 
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -73,6 +76,7 @@
 
         @media only screen and (max-width: 767px) {
           font-size: 14px;
+          width: 295px;
         }
 
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -121,6 +125,9 @@
     @media only screen and (max-width: 767px) {
       width: 95%;
     }
+    @media only screen and (min-width: 767px) and (max-width: 1024px) {
+      width: 621px;
+    }
     @media only screen and (min-width: 1024px) and (max-width: 1400px) {
       display: flex;
       flex-direction: row;
@@ -128,7 +135,7 @@
     }
     .big_red_text {
       @media only screen and (max-width: 767px) {
-        width: 545px;
+        width: 290px !important;
       }
       @media only screen and (min-width: 768px) and (max-width: 1024px) {
       }
@@ -146,6 +153,9 @@
       .para_text_2 {
         @media only screen and (max-width: 767px) {
           width: 95% !important;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          width: 630px !important;
         }
       }
     }
@@ -325,9 +335,13 @@
     padding: 40px 16px;
   }
   .booking_section_container {
+    @media only screen and (max-width: 767px) {
+      width: 320px;
+    }
     h1 {
       @media only screen and (max-width: 767px) {
         font-size: 20px;
+        width: 320px;
       }
       @media only screen and (min-width: 768px) and (max-width: 1024px) {
         font-size: 24px;
@@ -352,7 +366,7 @@
       .booking_time_table {
         align-self: center;
         @media only screen and (max-width: 767px) {
-          width: 90%;
+          width: 97%;
         }
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
         }
@@ -365,6 +379,41 @@
               align-items: flex-start;
             }
             @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            }
+            .table_first_data_contain {
+              @media only screen and (max-width: 767px) {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+
+                align-self: self-start;
+                width: 320px;
+              }
+              @media only screen and (max-width: 365px) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                align-self: self-start;
+                width: 275px;
+              }
+            }
+            .table_second_data_contain {
+              @media only screen and (max-width: 767px) {
+                display: flex;
+                width: 200px;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 8px;
+                align-self: self-start;
+              }
+            }
+            .red_button {
+              @media only screen and (max-width: 767px) {
+                width: 100%;
+                justify-content: center;
+              }
             }
           }
         }
@@ -393,7 +442,10 @@
       .course_card1 {
         .course_card_image {
           @media only screen and (max-width: 767px) {
-            padding: 120px;
+            padding: 100px;
+          }
+          @media only screen and (max-width: 425px) {
+            padding: 71px;
           }
         }
       }
@@ -557,17 +609,25 @@
       width: 100%;
       overflow: hidden;
     }
+    .swiper {
+      @media only screen and (max-width: 320px) {
+        padding: 0px;
+        padding-bottom: 18px;
+      }
+    }
   }
   .swiper-slide {
-    height: 360px !important;
-
-    @media only screen and (max-width: 767px) {
-      height: 200px;
+    height: 210px !important;
+    @media only screen and (max-width: 320px) {
     }
-
+    @media only screen and (min-width: 425px) and (max-width: 767px) {
+      height: 260px !important;
+    }
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      height: 250px;
-      height: 360px;
+      height: 260px !important;
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+      height: 260px !important;
     }
   }
 
